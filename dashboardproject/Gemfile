@@ -7,6 +7,18 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+# Front end
+gem 'haml-rails'
+gem 'haml'
+
+gem 'less-rails'
+gem 'less'
+
+gem 'twitter-bootstrap-rails'
+
+# Auth
+gem 'devise'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
