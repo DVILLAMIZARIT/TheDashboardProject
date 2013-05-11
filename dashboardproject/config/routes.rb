@@ -1,7 +1,10 @@
 Dashboardproject::Application.routes.draw do
   devise_for :users
-
   resources :users
+  
+  
+  
+  root :to => "index#get"
 
 
   # The priority is based upon order of creation:
