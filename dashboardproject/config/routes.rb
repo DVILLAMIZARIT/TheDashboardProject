@@ -1,12 +1,13 @@
 Dashboardproject::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :path => '/', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
   
   
   
   root :to => "pages#index"
-  match "/about" => "pages#about"
-  match "/contact" => "pages#contact"
+  
+  get "/about" => "pages#about"
+  get "/contact" => "pages#contact"
 
 
   # The priority is based upon order of creation:

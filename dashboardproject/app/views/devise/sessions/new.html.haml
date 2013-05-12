@@ -1,0 +1,27 @@
+%div#login.container
+  .row-fluid
+    .span6.offset3.login-styling
+      %h2 Sign in
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .row-fluid
+          .span12.alert
+            %button.close(data-dismiss="alert") &times;
+            = flash[:alert]
+        %br
+        .row-fluid
+          %label.span3 Email:
+          = f.email_field  :email, :autofocus => true, :placeholder => "Email Address", :class => "span8"
+        .row-fluid
+          %label.span3 Password:
+          = f.password_field :password, :placeholder => "Password", :class => "span8"
+        - if devise_mapping.rememberable?
+          .row-fluid
+            %label
+              Remember Me
+              = f.check_box :remember_me, :class => "span1"
+        .row-fluid
+          = f.submit "Sign in", :class => "span12 btn btn-inverse"
+        .row-fluid
+          %hr
+          = link_to "Forgot your password?", new_user_password_path, :class => "span5 btn btn-primary"
+          = link_to "Sign Up", new_user_registration_path, :class => "span5 offset1 btn btn-primary"
