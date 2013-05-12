@@ -14,3 +14,11 @@
             = link_to "About", about_path
           %li
             = link_to "Contact", contact_path
+          %li
+            = link_to "Sign Up", new_user_registration_path
+      = form_for(@user, :url => user_session_path, :html => {:class =>"navbar-form pull-right"}) do |f|
+        .row-fluid
+          = f.email_field :email, :class => "span4", :placeholder => "Email Address"
+          = f.password_field :password, :class => "span4", :placeholder => "Password"
+          = f.submit "Sign in", :class => "span2 btn btn-inverse"
+      
