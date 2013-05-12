@@ -4,7 +4,9 @@ Dashboardproject::Application.routes.draw do
   
   
   
-  root :to => "index#get"
+  root :to => "pages#index"
+  match "/about" => "pages#about"
+  match "/contact" => "pages#contact"
 
 
   # The priority is based upon order of creation:
