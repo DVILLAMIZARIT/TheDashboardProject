@@ -1,1 +1,4 @@
-Blah!
+- if user_signed_in?
+  = render "pages/indexs/signed_in"
+- else
+  = render "pages/indexs/signed_out"
