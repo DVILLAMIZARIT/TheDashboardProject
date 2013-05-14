@@ -1,6 +1,14 @@
 %div#index-signed-in.container
-  .row-fluid.text-styling
-    .span2.border-styling
-      lol!
-    .span9.border-styling
-      blah!
+  .row-fluid
+    %div#navbar.navbar.navbar-inverse
+      .navbar-inner.color_style
+        .container
+          %ul.nav
+            %li
+              = link_to "Dashboard", "#dashboard"
+            %li
+              = link_to "School", "#school"
+            %li
+              = link_to "Media", "#media"
+            %li
+              = link_to "Messages","#messages"
