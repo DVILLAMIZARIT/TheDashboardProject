@@ -1,14 +1,27 @@
 %div#index-signed-in.container
   .row-fluid
-    %div#navbar.navbar.navbar-inverse
-      .navbar-inner.color_style
-        .container
-          %ul.nav
-            %li
-              = link_to "Dashboard", "#dashboard"
-            %li
-              = link_to "School", "#school"
-            %li
-              = link_to "Media", "#media"
-            %li
-              = link_to "Messages","#messages"
+    .span12
+      %div#navbar.navbar.navbar-inverse
+        .navbar-inner.color_style
+          .container
+            %ul.nav
+              %li
+                = link_to "Dashboard", "#dashboard"
+              %li
+                = link_to "School", "#school"
+              %li
+                = link_to "Media", "#media"
+              %li
+                = link_to "Messages","#messages"
+  %div#dashboard.row-fluid
+    .span12(style="background-color:white;")
+      dash
+  %div#school.row-fluid
+    .span12(style="background-color:white;")
+      school
+  %div#media.row-fluid
+    .span12(style="background-color:white;")
+      media
+  %div#messages.row-fluid
+    .span12(style="background-color:white;")
+      messages
