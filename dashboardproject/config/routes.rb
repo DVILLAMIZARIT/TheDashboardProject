@@ -1,11 +1,15 @@
 Dashboardproject::Application.routes.draw do
   devise_for :users, :path => '/', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  
   resources :users
+  
+  match "/course_edit/:id" => "courses#edit", :as => "course_edit"
+  match "/course_add/:id" => "courses#add", :as => "course_add"
+  match "/course_rm/:id" => "courses#remove", :as => "course_remove"
   
   
   
   root :to => "pages#index"
-  
   get "/about" => "pages#about"
   get "/contact" => "pages#contact"
 

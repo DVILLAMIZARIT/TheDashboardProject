@@ -1,0 +1,8 @@
+.span12
+  %h3 New Course
+  - current_user.courses.each do |f|
+    .row-fluid
+      .span8
+        f.name
+      .span4
+        = link_to "remove", course_remove_path(f.id), remote: true
